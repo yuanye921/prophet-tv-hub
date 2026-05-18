@@ -18,7 +18,7 @@
         live: { label: '开放中', className: 'status-live' },
         testing: { label: '内测中', className: 'status-testing' },
         building: { label: '开发中', className: 'status-building' },
-        planning: { label: '筹备中', className: 'status-planning' },
+        planning: { label: '策划中', className: 'status-planning' },
         maintenance: { label: '维护中', className: 'status-maintenance' }
     };
 
