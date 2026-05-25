@@ -926,6 +926,11 @@ textarea {
     font-size: 0.98rem;
 }
 
+.game-panel[data-game-id="echo-lane"] .game-description {
+    color: var(--ink);
+    font-size: 0.98rem;
+}
+
 .progress-row {
     margin-top: 4px;
 }
