@@ -79,6 +79,12 @@
             small: 'assets/covers/optimized/qzgo-360.jpg',
             large: 'assets/covers/optimized/qzgo-720.jpg'
         },
+        'assets/covers/echo-lane.jpg': {
+            webpSmall: 'assets/covers/optimized/echo-lane-360.webp',
+            webpLarge: 'assets/covers/optimized/echo-lane-720.webp',
+            small: 'assets/covers/optimized/echo-lane-360.jpg',
+            large: 'assets/covers/optimized/echo-lane-720.jpg'
+        },
         'assets/covers/dark-fairytale-island.jpg': {
             webpSmall: 'assets/covers/optimized/dark-fairytale-island-360.webp',
             webpLarge: 'assets/covers/optimized/dark-fairytale-island-720.webp',
