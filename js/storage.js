@@ -2,7 +2,7 @@
     'use strict';
 
     var clientCache = null;
-    var LOCAL_FALLBACK_KEY = 'prophet_tv_hub_data_v7';
+    var LOCAL_FALLBACK_KEY = 'prophet_tv_hub_data_v8';
     var SESSION_KEY = 'prophet_tv_hub_admin_session';
 
     function getConfig() {
