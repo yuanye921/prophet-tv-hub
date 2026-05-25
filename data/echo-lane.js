@@ -18,7 +18,7 @@
         linkUrl: 'https://echolane.yuyanjia.top/',
         downloads: [],
         coverUrl: 'assets/covers/echo-lane.jpg',
-        sortOrder: 35.7,
+        sortOrder: 99,
         featured: false,
         visible: true,
         updatedAt: '2026-05-25'

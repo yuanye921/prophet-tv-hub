@@ -27,6 +27,11 @@
         'mist-archive': { label: '迷雾档案', className: 'series-mist' }
     };
 
+    var pricingMeta = {
+        free: { label: '免费', className: 'pricing-free' },
+        paid: { label: '付费', className: 'pricing-paid' }
+    };
+
     var elements = {
 
         bulletinEyebrow: document.getElementById('bulletinEyebrow'),
@@ -52,6 +57,23 @@
 
     function hasUsableLink(url) {
         return Boolean(url) && url !== '#';
+    }
+
+    function getPricingType(game) {
+        var pricing = String((game && game.pricing) || '');
+        if (!pricing || /待定|暂不|暂未|未定/.test(pricing)) {
+            return '';
+        }
+
+        if (pricing.indexOf('免费') > -1) {
+            return 'free';
+        }
+
+        if (/[0-9０-９]+(?:\.[0-9]+)?\s*元|买断|月|付费|收费/.test(pricing)) {
+            return 'paid';
+        }
+
+        return '';
     }
 
     var optimizedCoverSources = {
@@ -84,6 +106,12 @@
             webpLarge: 'assets/covers/optimized/echo-lane-720.webp',
             small: 'assets/covers/optimized/echo-lane-360.jpg',
             large: 'assets/covers/optimized/echo-lane-720.jpg'
+        },
+        'assets/covers/hougong-fenghualu.jpg': {
+            webpSmall: 'assets/covers/optimized/hougong-fenghualu-360.webp',
+            webpLarge: 'assets/covers/optimized/hougong-fenghualu-720.webp',
+            small: 'assets/covers/optimized/hougong-fenghualu-360.jpg',
+            large: 'assets/covers/optimized/hougong-fenghualu-720.jpg'
         },
         'assets/covers/dark-fairytale-island.jpg': {
             webpSmall: 'assets/covers/optimized/dark-fairytale-island-360.webp',
@@ -157,6 +185,7 @@
         var query = state.query.toLowerCase();
 
         return getVisibleGames().filter(function (game) {
+            var pricingType = getPricingType(game);
             var searchBlob = [
                 game.title,
                 game.subtitle,
@@ -167,6 +196,7 @@
                 game.pricing,
                 game.spotlight,
                 game.series && seriesMeta[game.series] ? seriesMeta[game.series].label : '',
+                pricingType && pricingMeta[pricingType] ? pricingMeta[pricingType].label : '',
                 (game.tags || []).join(' ')
             ].join(' ').toLowerCase();
 
@@ -181,6 +211,8 @@
                 matchesTag = game.status === state.activeTag.replace('__status__', '');
             } else if (state.activeTag.indexOf('__series__') === 0) {
                 matchesTag = game.series === state.activeTag.replace('__series__', '');
+            } else if (state.activeTag.indexOf('__pricing__') === 0) {
+                matchesTag = pricingType === state.activeTag.replace('__pricing__', '');
             } else {
                 matchesTag = (game.tags || []).indexOf(state.activeTag) > -1;
             }
@@ -290,6 +322,7 @@
         /* 收集实际存在的状态 */
         var statusSet = {};
         var seriesSet = {};
+        var pricingSet = {};
         visibleGames.forEach(function (game) {
             if (game.status && statusMeta[game.status]) {
                 statusSet[game.status] = statusMeta[game.status].label;
@@ -300,6 +333,11 @@
                 if (tags.indexOf(seriesLabel) === -1) {
                     seriesSet[game.series] = seriesMeta[game.series];
                 }
+            }
+
+            var pricingType = getPricingType(game);
+            if (pricingType && pricingMeta[pricingType]) {
+                pricingSet[pricingType] = pricingMeta[pricingType];
             }
         });
 
@@ -323,13 +361,22 @@
             return '<button class="tag-chip tag-chip-series ' + meta.className + active + '" type="button" data-tag="__series__' + key + '">' + meta.label + '</button>';
         }).join('');
 
+        /* 收费分类 */
+        var pricingChips = Object.keys(pricingMeta).filter(function (key) {
+            return Boolean(pricingSet[key]);
+        }).map(function (key) {
+            var active = state.activeTag === ('__pricing__' + key) ? ' active' : '';
+            var meta = pricingMeta[key];
+            return '<button class="tag-chip tag-chip-pricing ' + meta.className + active + '" type="button" data-tag="__pricing__' + key + '">' + meta.label + '</button>';
+        }).join('');
+
         /* 状态标签 */
         var statusChips = Object.keys(statusSet).map(function (key) {
             var active = state.activeTag === ('__status__' + key) ? ' active' : '';
             return '<button class="tag-chip tag-chip-status ' + statusMeta[key].className + active + '" type="button" data-tag="__status__' + key + '">' + statusSet[key] + '</button>';
         }).join('');
 
-        elements.tagRail.innerHTML = (chips + seriesChips + statusChips) || '<span class="admin-muted">暂时还没有标签。</span>';
+        elements.tagRail.innerHTML = (chips + seriesChips + pricingChips + statusChips) || '<span class="admin-muted">暂时还没有标签。</span>';
 
         Array.prototype.slice.call(elements.tagRail.querySelectorAll('[data-tag]')).forEach(function (button) {
             button.addEventListener('click', function () {

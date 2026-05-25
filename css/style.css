@@ -852,6 +852,22 @@ textarea {
     font-weight: 700;
 }
 
+.tag-chip-pricing {
+    font-weight: 700;
+}
+
+.tag-chip-pricing.pricing-free {
+    color: #d7f2df;
+    border-color: rgba(101, 186, 133, 0.5);
+    background: rgba(101, 186, 133, 0.12);
+}
+
+.tag-chip-pricing.pricing-paid {
+    color: #fff0c5;
+    border-color: rgba(239, 199, 119, 0.5);
+    background: rgba(239, 199, 119, 0.12);
+}
+
 .tag-chip-status.status-live {
     color: #b8ebd5;
     border-color: rgba(101, 186, 133, 0.45);
