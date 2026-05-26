@@ -141,6 +141,8 @@
             pricing: toText(raw.pricing, '待补充'),
             summary: toText(raw.summary, ''),
             description: toText(raw.description, ''),
+            warningTitle: toText(raw.warningTitle, ''),
+            warningText: toText(raw.warningText, ''),
             spotlight: toText(raw.spotlight, ''),
             linkLabel: toText(raw.linkLabel, '进入作品'),
             linkUrl: toText(raw.linkUrl, ''),

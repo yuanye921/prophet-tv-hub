@@ -107,6 +107,12 @@
             small: 'assets/covers/optimized/echo-lane-360.jpg',
             large: 'assets/covers/optimized/echo-lane-720.jpg'
         },
+        'assets/covers/berry-night.jpg': {
+            webpSmall: 'assets/covers/optimized/berry-night-360.webp',
+            webpLarge: 'assets/covers/optimized/berry-night-720.webp',
+            small: 'assets/covers/optimized/berry-night-360.jpg',
+            large: 'assets/covers/optimized/berry-night-720.jpg'
+        },
         'assets/covers/hougong-fenghualu.jpg': {
             webpSmall: 'assets/covers/optimized/hougong-fenghualu-360.webp',
             webpLarge: 'assets/covers/optimized/hougong-fenghualu-720.webp',
@@ -453,6 +459,13 @@
                 seriesBadge = '<span class="series-badge ' + sm.className + '">' + sm.label + '</span>';
             }
 
+            var warningHtml = game.warningText
+                ? '<div class="game-warning">' +
+                    (game.warningTitle ? '<strong>' + escapeHtml(game.warningTitle) + '</strong>' : '') +
+                    '<span>' + escapeHtml(game.warningText) + '</span>' +
+                    '</div>'
+                : '';
+
             return (
                 '<article class="game-panel' + (game.series ? ' game-series-' + escapeHtml(game.series) : '') + '" data-game-id="' + escapeHtml(game.id) + '">' +
                 '<div class="game-cover-col">' + coverOuter + '</div>' +
@@ -471,6 +484,7 @@
                 '<div class="tag-list">' + tagHtml + '</div>' +
                 '<p class="game-summary">' + escapeHtml(game.summary) + '</p>' +
                 (game.description ? '<p class="game-description">' + escapeHtml(game.description) + '</p>' : '') +
+                warningHtml +
                 '<div class="progress-row">' +
                 '<div class="progress-head">' +
                 '<span>' + escapeHtml(game.progressLabel) + '</span>' +
