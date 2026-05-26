@@ -7,21 +7,21 @@
         universe: '原创',
         category: '悬疑解谜·黑暗童话',
         tags: ['悬疑解谜'],
-        status: 'testing',
-        progressLabel: '测试中 · 后续以文风修订与问题修复为主',
+        status: 'live',
+        progressLabel: '开放中 · 后续以文风修订与问题修复为主',
         progressValue: 95,
         pricing: '9.9元买断，API自备',
         summary: '童话书合上的那一刻，岛上的灯全灭了。你不是来旁观故事的读者，而是被旧书点名留下的人：每一章都有一条会吃人的规则，每一位同伴都藏着被改写过的旧事。',
         description: '前六章像拆开一只上锁的音乐盒，在安眠、钟声、姓名、饥饿与舞台回应里一步步听见真相；终章则把笔交回你手里，能不能让所有人离开，取决于你怎么写完最后一句。',
         spotlight: '悬疑解谜 · 开放叙事',
-        linkLabel: '内测中，暂未开放',
-        linkUrl: '#',
+        linkLabel: '进入游戏',
+        linkUrl: 'https://island.yuyanjia.top',
         downloads: [],
         coverUrl: 'assets/covers/dark-fairytale-island.jpg',
         sortOrder: 39.5,
         featured: false,
         visible: true,
         series: 'mist-archive',
-        updatedAt: '2026-05-13'
+        updatedAt: '2026-05-26'
     });
 })();
