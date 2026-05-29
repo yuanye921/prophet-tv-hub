@@ -142,6 +142,12 @@
             webpLarge: 'assets/covers/optimized/paddock-club-720.webp',
             small: 'assets/covers/optimized/paddock-club-360.jpg',
             large: 'assets/covers/optimized/paddock-club-720.jpg'
+        },
+        'assets/covers/panic-date.jpg': {
+            webpSmall: 'assets/covers/optimized/panic-date-360.webp',
+            webpLarge: 'assets/covers/optimized/panic-date-720.webp',
+            small: 'assets/covers/optimized/panic-date-360.jpg',
+            large: 'assets/covers/optimized/panic-date-720.jpg'
         }
     };
 
