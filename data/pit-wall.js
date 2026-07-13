@@ -10,7 +10,7 @@
         status: 'live',
         progressLabel: '核心玩法已完整实现，持续迭代中',
         progressValue: 78,
-        pricing: '免费',
+        pricing: '游戏免费，API自备',
         summary: '内测组小伙伴苹果条开发的 F1 车手互动游戏——私聊、约会、日记、动态、赛季数据一应俱全。深度人设让每位车手性格分明，F1 赛事数据实时同步，还收录了大量真实历史事件可供回味。高度可定制的用户资料卡，手机电脑双端自适应。',
         description: '',
         spotlight: '聊天模拟 · 关系养成',

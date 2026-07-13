@@ -394,6 +394,23 @@ textarea {
     border-top: 1px solid var(--line);
 }
 
+.notice-explain {
+    display: grid;
+    gap: 8px;
+    margin-top: 16px;
+    color: var(--muted-deep);
+    font-size: 0.88rem;
+    line-height: 1.8;
+}
+
+.notice-explain p {
+    margin: 0;
+}
+
+.notice-explain strong {
+    color: var(--text);
+}
+
 .resource-title {
     margin: 0 0 16px;
     color: var(--gold);
