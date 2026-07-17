@@ -143,6 +143,12 @@
             small: 'assets/covers/optimized/paddock-club-360.jpg',
             large: 'assets/covers/optimized/paddock-club-720.jpg'
         },
+        'assets/covers/witch-train.jpg': {
+            webpSmall: 'assets/covers/optimized/witch-train-360.webp',
+            webpLarge: 'assets/covers/optimized/witch-train-720.webp',
+            small: 'assets/covers/optimized/witch-train-360.jpg',
+            large: 'assets/covers/optimized/witch-train-720.jpg'
+        },
         'assets/covers/panic-date.jpg': {
             webpSmall: 'assets/covers/optimized/panic-date-360.webp',
             webpLarge: 'assets/covers/optimized/panic-date-720.webp',
