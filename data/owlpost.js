@@ -19,8 +19,8 @@
         downloads: [
             {
                 platform: '安卓 APK',
-                url: 'https://wwbex.lanzoul.com/i5Hby3lmrr7i',
-                password: '2hak'
+                url: 'https://wwbex.lanzoul.com/iTdax41zvgbe',
+                password: 'ap6a'
             },
             {
                 platform: 'iOS 封装包',
