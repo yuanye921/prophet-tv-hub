@@ -6,7 +6,7 @@
         subtitle: '在这里，每一个女孩都会长成绝对完美的模样。',
         universe: '原创',
         category: '本格心理恐怖·群像叙事',
-        tags: ['微恐', '校园'],
+        tags: ['微恐', '校园', '群像叙事'],
         status: 'live',
         progressLabel: '开放中 · 持续优化世界书与叙事体验',
         progressValue: 95,
