@@ -112,6 +112,7 @@
             coverUrl: 'assets/covers/pit-wall.svg',
             sortOrder: 50,
             featured: false,
+            topBadges: [],
             visible: true,
             updatedAt: today()
         }, seed || {}), 0);
@@ -151,6 +152,7 @@
             coverUrl: toText(raw.coverUrl, 'assets/covers/pit-wall.svg'),
             sortOrder: Number.isFinite(Number(raw.sortOrder)) ? Number(raw.sortOrder) : (index + 1) * 10,
             featured: toBoolean(raw.featured, false),
+            topBadges: normalizeTags(raw.topBadges),
             visible: toBoolean(raw.visible, true),
             updatedAt: toText(raw.updatedAt, today()),
             downloads: Array.isArray(raw.downloads) ? raw.downloads : [],

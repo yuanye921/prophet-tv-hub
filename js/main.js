@@ -434,6 +434,9 @@
             var tagHtml = (game.tags || []).filter(Boolean).map(function (tag) {
                 return '<span class="mini-chip">' + escapeHtml(tag) + '</span>';
             }).join('');
+            var topBadgeHtml = (game.topBadges || []).filter(Boolean).map(function (badge) {
+                return '<span class="status-pill status-star">' + escapeHtml(badge) + '</span>';
+            }).join('');
 
             var coverInner = renderCoverImage(game, index);
             var coverOuter = hasUsableLink(game.linkUrl)
@@ -485,6 +488,7 @@
                 '<div class="game-topline">' +
                 '<span class="status-pill ' + status.className + '">' + status.label + '</span>' +
                 (game.featured ? '<span class="status-pill status-featured">重点企划</span>' : '') +
+                topBadgeHtml +
                 seriesBadge +
                 '</div>' +
                 '<div class="game-title-row">' +
