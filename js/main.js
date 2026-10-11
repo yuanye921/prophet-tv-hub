@@ -154,6 +154,12 @@
             webpLarge: 'assets/covers/optimized/panic-date-720.webp',
             small: 'assets/covers/optimized/panic-date-360.jpg',
             large: 'assets/covers/optimized/panic-date-720.jpg'
+        },
+        'assets/covers/life-not-right.png': {
+            webpSmall: 'assets/covers/optimized/life-not-right-360.webp',
+            webpLarge: 'assets/covers/optimized/life-not-right-720.webp',
+            small: 'assets/covers/optimized/life-not-right-360.jpg',
+            large: 'assets/covers/optimized/life-not-right-720.jpg'
         }
     };
 
