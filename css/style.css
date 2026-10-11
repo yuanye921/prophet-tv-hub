@@ -1009,6 +1009,13 @@ textarea {
     font-size: 0.98rem;
 }
 
+.game-panel[data-game-id="life-not-right"] .info-grid .info-cell:nth-child(2) strong {
+    color: var(--muted);
+    font-size: 0.94rem;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
 .game-warning {
     display: grid;
     gap: 6px;
